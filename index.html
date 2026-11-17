@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 class="heading">HIH Expense Tracker</h1>
+      <p class="intro">Welcome, User;</p>
+    </div>
+    <div class="container">
+      <div class="box">
+        <h2 class="heading">Balance</h2>
+        <p id="entry">Your current balance is:</p>
+        <p id="balanceAmount">&#8358;0</p>
+      </div>
+      <div class="box">
+        <h2 class="heading">Total Income</h2>
+        <p id="entry">Your total Income is:</p>
+        <p id="incomeAmount">&#8358;0</p>
+      </div>
+      <div class="box">
+        <h2 class="heading">Total Expenses</h2>
+        <p id="entry">Your total expense is:</p>
+        <p id="expenseAmount">&#8358;0</p>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <label for="description">Description:</label>
+        <input
+          type="text"
+          id="description"
+          placeholder="Enter transaction type"
+        />
+      </div>
+      <div>
+        <label for="amount">Amount:</label>
+        <input type="number" id="inputAmount" placeholder="Enter amount" />
+      </div>
+
+      <label for="type">Transaction Type:</label>
+      <select id="type">
+        <option value="">Select Transaction type</option>
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+    </div>
+    <div>
+      <button type="submit" class="button">Add Transactions</button>
+      <button id="clearTransactions">Clear All Transactions</button>
+    </div>
+    <div>
+      <h2 class="heading">Recent Transactions</h2>
+      <ul id="transactionList"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- 
+Fix the Naira Symbol
+Format the Stats figures with commas
+Centralize the input fields and buttons
+add padding to the input fields and remove black borders
+Change default fonts
+put individual record in a card - with the delete button at the end 
+save total amount to local storage so that it is not lost when the page is refreshed
+-->
